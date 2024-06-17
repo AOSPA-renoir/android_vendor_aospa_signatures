@@ -1,18 +1,16 @@
-# vendor_parasite_signatures
+# vendor_aospa_signatures
 
 ```bash
 cd build/soong
-git remote add --fetch tpr https://github.com/TheParasiteProject/build_soong.git
-# https://github.com/TheParasiteProject/build_soong/commit/0fc0a6c620e031c46882fdd0363c1cda9d0f0b7b
-git cherry-pick 0fc0a6c620e031c46882fdd0363c1cda9d0f0b7b
+git fetch https://gerrit.aospa.co/AOSPA/android_build_soong refs/changes/57/40257/1 && git cherry-pick FETCH_HEAD
 ```
 
 ```bash
-croot && git clone https://github.com/TheParasiteProject/vendor_parasite_signatures vendor/parasite/signatures
+croot && git clone git@github.com:aospa-chrisl7/android_vendor_aospa_signatures.git vendor/aospa/signatures
 ```
 
 ```bash
-cd vendor/parasite/signatures
+cd vendor/aospa/signatures
 ```
 
 ```bash
@@ -30,9 +28,9 @@ TARGET_BUILD_FULLY_SIGN := true
 
 ```makefile
 TARGET_BUILD_FULLY_SIGN := true
-include vendor/parasite/signatures/BoardConfigSign.mk
+include vendor/aospa/signatures/BoardConfigSign.mk
 
-TARGET_AVB_KEY_PATH := $(PARASITE_AVB_KEY_PATH)
+TARGET_AVB_KEY_PATH := $(AOSPA_AVB_KEY_PATH)
 # Differs what bit (e.g. 2048) you selected for key generation
 TARGET_AVB_ALGORITHM := SHA256_RSA2048
 
