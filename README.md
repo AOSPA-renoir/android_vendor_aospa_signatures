@@ -6,7 +6,7 @@ git fetch https://gerrit.aospa.co/AOSPA/android_build_soong refs/changes/57/4025
 ```
 
 ```bash
-croot && git clone git@github.com:aospa-chrisl7/android_vendor_aospa_signatures.git vendor/aospa/signatures
+croot && git clone https://github.com/AOSPA-renoir/android_vendor_aospa_signatures.git vendor/aospa/signatures
 ```
 
 ```bash
